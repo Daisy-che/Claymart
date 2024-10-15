@@ -1,0 +1,296 @@
+
+.dashboard {
+  display: flex;
+  height: 100vh;
+  background-color: #f0f0f0;
+  font-family: Arial, sans-serif;
+}
+
+.sidebar {
+  width: 250px;
+  height: 100vh;
+  background: linear-gradient(to bottom right, #5600a9, #660090);
+  color: white;
+  padding: 20px;
+  font-family: Arial, sans-serif;
+  position: fixed;
+}
+
+.sidebar h2, .sidebar h3 {
+  margin: 0;
+  padding: 0;
+  font-weight: bold;
+}
+
+.sidebar ul {
+  list-style-type: none;
+  padding: 40px;
+}
+
+.sidebar ul li {
+  margin: 20px 0;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  margin-top: 20px;
+}
+
+.sidebar ul li i {
+  margin-right: 10px;
+}
+
+.sidebar ul li:hover {
+  background-color: #5a1ba3;
+  padding: 5px;
+  border-radius: 5px;
+}
+
+.icon {
+  font-size: 20px;
+}
+
+.main-content {
+  flex-grow: 1;
+  padding: 20px;
+  background-color: #f0f0f0;
+  margin-left: 20%;
+  border: 2px solid #ddd;
+}
+
+.sidebar-right {
+  width: 300px;
+  padding: 24px 30px;
+  background-color: white;
+  font-family: Arial, sans-serif;
+  margin-top: 5%;
+  height: 74vh;
+}
+
+.top-bar {
+  margin-bottom: 20px;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.ti {
+  width: 100%; 
+  background-color: white;
+  height: 70vh;
+}
+
+th {
+  background-color: #5a1ba3;
+}
+
+th, td {
+  border: 1px solid #ddd;
+  padding: 20px 12px;
+  text-align: left;
+  background-color: white;
+}
+
+.payment-method {
+  margin-top: 20px;
+}
+
+.mpesa-section {
+  background-color: #f7dfff;
+  padding: 10px;
+  margin-top: 10px;
+  border-radius: 3px;
+}
+
+.payment-buttons {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+  margin-top: 10px;
+}
+
+.complete-sale {
+  width: 100%;
+  background-color: green;
+  color: white;
+  padding: 10px;
+  margin-top: 20px;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.mpesa {
+  width: 90px;
+}
+
+.btn {
+  padding: 24px 30px;
+  background-color: green;
+  border-radius: 5px;
+}
+
+.total {
+  color: #c91815;
+}
+
+.bt {
+  padding: 12px 40px;
+  border-radius: 5px;
+  background-color: #f7dfff;
+}
+
+.payment-amounts {
+  display: flex;
+  gap: 130px;
+}
+
+.search-bar {
+  display: flex;
+  gap: 10%;
+}
+
+.search-bar {
+  display: flex;
+  gap: 40%;
+}
+
+.search-input {
+  width: 200%;
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  background-color: #d0c6ff;
+}
+
+.search-bar {
+  background-color: white;
+  padding: 10px 20px;
+  border-radius: 5px;
+}
+
+.button-container {
+  display: flex;
+  gap: 10px;
+}
+
+.cancel-sale, .remove-item {
+  padding: 5px 40px;
+  font-size: 16px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.cancel-sale {
+  background-color: #f44336;
+  color: white;
+}
+
+.remove-item {
+  background-color: #2196F3;
+  color: white;
+}
+
+.cancel-sale:hover {
+  background-color: #d32f2f;
+}
+
+.remove-item:hover {
+  background-color: #1976D2;
+}
+
+/* Responsive Media Queries */
+@media (max-width: 1024px) {
+  .sidebar {
+    width: 200px;
+  }
+
+  .main-content {
+    margin-left: 200px;
+    padding: 10px;
+  }
+
+  .sidebar-right {
+    width: 250px;
+    margin-top: 6%;
+  }
+
+  .payment-buttons {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .search-input {
+    width: 150%;
+  }
+}
+
+@media (max-width: 768px) {
+  .dashboard {
+    flex-direction: column;
+  }
+
+  .sidebar {
+    width: 100%;
+    height: auto;
+    position: relative;
+  }
+
+  .main-content {
+    margin-left: 0;
+  }
+
+  .sidebar-right {
+    width: 100%;
+    margin-top: 10px;
+  }
+
+  .search-bar {
+    flex-direction: column;
+    gap: 5px;
+  }
+
+  .search-input {
+    width: 100%;
+  }
+
+  .button-container {
+    flex-direction: column;
+  }
+}
+
+@media (max-width: 480px) {
+  .sidebar {
+    padding: 10px;
+  }
+
+  .sidebar ul li {
+    font-size: 14px;
+    margin: 10px 0;
+  }
+
+  .main-content {
+    padding: 10px;
+  }
+
+  table th, table td {
+    padding: 10px;
+  }
+
+  .search-input {
+    font-size: 14px;
+    padding: 8px;
+  }
+
+  .cancel-sale, .remove-item {
+    font-size: 14px;
+    padding: 5px 20px;
+  }
+
+  .complete-sale {
+    padding: 8px;
+  }
+}
